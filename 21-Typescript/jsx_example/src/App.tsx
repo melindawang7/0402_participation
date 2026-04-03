@@ -10,30 +10,28 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center p-8 transition-colors duration-300">
-      <div className="flex gap-8 mb-12">
+    <div className="min-h-screen bg-gray-300 flex flex-col items-center justify-center p-8 transition-colors duration-300">
+      <div className="flex gap-8 mb-8">
         <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
-          <img src={viteLogo} className="logo hover:opacity-80 transition-opacity" alt="Vite logo" />
+          <img src={viteLogo} className="logo w-20 h-20" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
-          <img src={reactLogo} className="logo react hover:opacity-80 transition-opacity" alt="React logo" />
+          <img src={reactLogo} className="logo react w-20 h-20" alt="React logo" />
         </a>
       </div>
-      <h1 className="text-4xl font-bold text-white mb-8">Vite + React</h1>
-      <div className="bg-slate-800 rounded-xl p-8 shadow-2xl mb-8">
-        <button onClick={() => setCount((count) => count + 1)} className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 transform hover:scale-105 mb-4">
+      <h1 className="text-4xl font-bold mb-8 text-gray-800 dark:text-white">Vite + React</h1>
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 text-center">
+        <button onClick={() => setCount((count) => count + 1)} className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition duration-200">
           count is {count}
         </button>
-        <p className="text-gray-300">
-          Edit <code className="text-purple-400">src/App.tsx</code> and save to test HMR
+        <p className="text-gray-600 dark:text-gray-400">
+          Edit <code className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-sm font-mono">src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="text-gray-400 mb-8">
+      <p className="read-the-docs text-gray-500 dark:text-gray-400 text-sm">
         Click on the Vite and React logos to learn more
       </p>
-      <div className="bg-slate-800 rounded-xl p-8 shadow-2xl">
-        <SumComponent />
-      </div>
+      <SumComponent />
     </div>
   )
 }
